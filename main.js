@@ -83,13 +83,13 @@ app.controller('DetailedController', function($scope, $http, $routeParams) {
     zoom: 12,
   };
 
-  $scope.marker = {
+/*  $scope.marker = {
     center: {
         latitude: 44.800114,
         longitude: 20.448991
     }
   };
-
+*/
   var directionsDisplay = new google.maps.DirectionsRenderer();
   var directionsService = new google.maps.DirectionsService();
   var geocoder = new google.maps.Geocoder();
