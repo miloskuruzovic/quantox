@@ -1,0 +1,54 @@
+<div class="container-fluid wrapper" data-ng-controller="RouteController">
+	<header class="row">
+		<h1 class="app-title">{{ appTitle }}</h1>
+	</header>
+
+	<section class="container route-main">
+		<section class="row">
+			<h1 class="app-headline">{{ appHeadline }}</h1>
+		</section>
+
+		<table class="table table-hover route-table">
+			<thead>
+				<tr>
+					<th>Route</th>
+					<th>delete?</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr data-ng-repeat="route in routes track by $index">
+					<td>
+						<a href="#!/detailed/{{ $index }}">
+						<span class="done-{{ route.done }}">{{ route.origin }}</span> 
+						-- 
+						<span class="done-{{ route.done }}">{{ route.destination }}</span>
+						</a>
+					</td>
+					<td>
+						<input type="checkbox" data-ng-model="route.done">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p class="archive">[ <a href="" data-ng-click="archive()">Remove Selected Routes</a> ]</p>		
+	</section>
+	<div class="container">
+		<div class="form-div">
+		<form data-ng-submit="addRoute()" class="route-form form-group">
+			<div class="form-group">
+				<span>Your current GPS location (if enabled)</span>
+				<br>
+				<input type="text" class="form-control" data-ng-model="routeOrigin" placeholder="Please enable GPS Location" value="{{ routeOrigin }}" id="origin" />
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" data-ng-model="routeDestination" placeholder="Enter end point" id="destination" />
+			</div>
+			<br />
+			<div class="form-group">
+				<input type="submit" value="Add Route" class="btn btn-primary" />
+			</div>
+		</form>
+		</div>
+	</div>
+</div>

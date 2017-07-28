@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Gruppo|Josefin+Sans:400,700&subset=latin-ext');
+
+body {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.6em;
+	margin: 0;
+	padding: 0;
+	color: #222;
+}
+
+header {
+	text-align: center;
+	margin-bottom: 50px;
+	background-color: #000;
+	animation-name: slide-down;
+	animation-duration: 1.5s;
+	animation-direction: forwards;
+}
+
+.app-title {
+	font-family: 'Gruppo', cursive !important;
+	font-size: 38px;
+	color: #ccc;
+}
+
+.route-main {
+	opacity: 0;
+	animation-name: fade-in;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-delay: 1.5s;
+}
+
+.app-headline {
+	color: #666;
+	font-size: 18px;
+}
+
+.route-table {
+	margin-top: 30px;
+}
+
+.done-true {
+	text-decoration: line-through;
+	color: grey;
+}
+
+.archive {
+	text-align: right;
+	margin-top: 20px;
+}
+
+.form-div {
+	margin-top: 150px;
+	animation-name: slide-up;
+	animation-duration: 1.5s;
+	animation-direction: forwards;
+}
+
+.delete {
+	color: #AA002D;
+}
+
+.route-form {
+	padding: 20px;
+}
+
+input[type="text"] {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+	border-top: 0px;
+	border-right: 0px;
+	border-left: 0px;
+	height: 30px;
+	width: 100%;
+	max-width: 400px;
+	margin-top: 10px;
+}
+
+input[type="submit"] {
+	text-align: center;
+	margin: 10px;
+}
+
+.nav-back {
+	margin-bottom: 35px;
+}
+
+.angular-google-map-container {
+  height: 400px;
+  margin-bottom: 15px;
+}
+
+.panel-primary {
+  padding: 15px;
+}
+
+@keyframes slide-down {
+	0% {transform: translateY(-150%);
+		opacity: 0;}
+	100% {transform: translateY(0%);
+		opacity: 1;}
+}
+
+@keyframes slide-up {
+	0% {transform: translateY(150%);
+		opacity: 0;}
+	100% {transform: translateY(0%);
+		opacity: 1;}
+}
+
+@keyframes fade-in {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
